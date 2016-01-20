@@ -1,11 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int main()
 {
-    int a=0;
+    char *a = malloc(sizeof(char) *128);
+
     printf("value= ");
-    scanf("%d",&a);
-    printf("%d",a);
+
+    scanf("%s", a);
+
+    if(!strcmp(a, "love")) {
+        printf("I love Aycan");
+    } else {
+        printf("%s", a);
+    }
+
+    free(a);
+
     return 0;
 }
